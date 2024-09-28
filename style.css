@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container { 
+    height: 100%;
+    padding: 0 140px;
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 40px 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navigation-bar, .social-media {
+    width: 100%;
+    display: flex;
+}
+
+
+.navigation-bar > nav{
+    width: 256px;
+}
+
+
+.social-media > nav{
+    width: 148px;
+}
+
+.social-media {
+    justify-content: end;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: #22282B;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.logo {
+    text-align: center;
+}
+
+.service {
+    width: 100%;
+    height: 854px;
+    padding: 82px 69px 0 69px;
+    margin-bottom: 90px;
+    box-sizing: border-box;
+    background-color: #F3F5F6;
+    border-radius: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.service > h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.service > button {
+    border-radius: 11px;
+    border: none;
+    padding: 18px 45px;
+    margin: 36px 0 79px 0;
+    background-color: #5B40FF;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.browser {
+    width: 100%; 
+    height: 100%;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #22282B;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+}
+
+.window {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    width: 53px;
+}
+
+.circle {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+#red {
+    background-color: #FC5652;
+}
+
+#yellow {
+    background-color: #FDBC40;
+}
+
+#green {
+    background-color: #34C84A;
+}
+
+hr {
+    left: 0;
+    position: absolute;
+    width: 100vw;
+}
