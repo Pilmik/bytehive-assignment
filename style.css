@@ -1,12 +1,20 @@
+:root {
+    --primary-color: #5B40FF;
+    --secondary-color: #22282B;
+    --bg-color: #F3F5F6;
+    --text-color: #909DA2;
+}
+
 body {
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
 }
 
 .main-container { 
     height: 100%;
     padding: 0 140px;
-    font-family: "Inter", sans-serif;
+    
 }
 
 header {
@@ -42,9 +50,12 @@ header nav {
     justify-content: space-between;
 }
 
-header a {
+a {
     color: #22282B;
-    text-decoration: none;
+    text-decoration: none;  
+}
+
+header a {
     font-weight: 500;
     font-size: 1.125rem;
 }
@@ -59,7 +70,7 @@ header a {
     padding: 82px 69px 0 69px;
     margin-bottom: 90px;
     box-sizing: border-box;
-    background-color: #F3F5F6;
+    background-color: var(--bg-color);
     border-radius: 30px;
     text-align: center;
     overflow: hidden;
@@ -75,7 +86,7 @@ button {
     border-radius: 11px;
     border: none;
     padding: 18px 45px;
-    background-color: #5B40FF;
+    background-color: var(--primary-color);
     color: white;
     font-size: 1.125rem;
     font-weight: 600;
@@ -98,7 +109,7 @@ button {
     justify-content: center;
     width: 100%;
     height: 50px;
-    background-color: #22282B;
+    background-color: var(--secondary-color);
     border-top-left-radius: 19px;
     border-top-right-radius: 19px;
 }
@@ -138,7 +149,12 @@ hr {
     margin: 0;
     left: 0;
     position: absolute;
-    width: 100vw;
+    width: 100%;
+}
+
+.trial, .statistics, .plans, .jumbotrons, .activities {
+    width: 100%;
+    padding: 90px 0;
 }
 
 .trial {
@@ -146,9 +162,7 @@ hr {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 70px 40px;
-    width: 100%;
     max-height: 331px;
-    padding: 90px 0;
 }
 
 h2 {
@@ -163,7 +177,7 @@ h2 {
 
 p, .price-symbol, .price-text {
     margin: 0;
-    color: #909DA2;
+    color: var(--text-color);
     line-height: 25.2px;
     font-size: 1.125rem;
     font-weight: 500;
@@ -183,10 +197,6 @@ p, .price-symbol, .price-text {
     align-self: start;
 }
 
-.statistics {
-    width: 100%;
-    padding: 90px 0;
-}
 
 .statistics > h2 {
     margin-bottom: 50px;
@@ -210,7 +220,7 @@ p, .price-symbol, .price-text {
     left: -1.5px;
     position: absolute;
     padding-left: 20px;
-    border-left: 3px solid #22282B;
+    border-left: 3px solid var(--secondary-color);
 }
 
 .box > h2{
@@ -218,8 +228,9 @@ p, .price-symbol, .price-text {
     margin-right: 40px;
 }
 
-h3 {
-    color: #22282B;
+h3, .list li a{
+    text-decoration: none;
+    color: var(--secondary-color);
     margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
@@ -227,9 +238,7 @@ h3 {
 }
 
 .plans {
-    width: 100%;
     height: 1087px;
-    padding: 90px 0;
     text-align: center;
 }
 
@@ -303,7 +312,7 @@ h3 {
 }
 .info > p {
     text-align: start;
-    color: #22282B;
+    color: var(--secondary-color);
 }
 
 .standart .info h3, .business .info h3{
@@ -322,10 +331,13 @@ h3 {
     border-color: #E6E9EA;
 }
 
-.info ul {
+ul {
     list-style-type: none;
-    width: 100%;
     margin: 0;
+}
+
+.info ul {
+    width: 100%;
     padding: 0;
     position: absolute;
     bottom: 0;
@@ -351,7 +363,7 @@ h3 {
 .standart {
     position: relative;
     padding-top: 534px;
-    background-color: #F3F5F6;
+    background-color: var(--bg-color);
 }
 
 .standart .info {
@@ -360,11 +372,11 @@ h3 {
 
 
 .most-popular {
-    background-color: #5B40FF;
+    background-color: var(--primary-color);
     box-shadow: 10px 10px 55px 0 #4F6AFB4D;
     position: absolute;
     padding: 108px 40px 0 40px;
-    border: 1px solid #5B40FF;
+    border: 1px solid var(--primary-color);
     border-radius: 20px;
     top: -54px;
     left: 0;
@@ -381,7 +393,7 @@ h3 {
 
 .standart .buy-btn {
     background-color: white;
-    color: #22282B;
+    color: var(--secondary-color);
 }
 
 .popular {
@@ -389,13 +401,134 @@ h3 {
     top: 20px;
     right: 20px;
     background-color: white;
-    color: #22282B;
+    color: var(--secondary-color);
     padding: 11px 23px;
     border-radius: 38px;
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 16.8px;
     letter-spacing: 0.04em;
+}
+
+.jumbotrons {
+    text-align: center;
+}
+
+.jumbotrons h3 {
+    font-size: 2.25rem;
+    line-height: 46.8px;
+    padding-top: 45px;
+    padding-bottom: 81px;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.lists-container {
+    width: 100%;
+    margin-top: 54px;
+    display: flex;
+}
+
+.list {
+    flex: 1;
+}
+
+.list ul {
+    padding-left: 0; 
+}
+
+.list li:nth-child(-n + 3) {
+    margin-bottom: 20px;
+}
+
+.list li a {
+    position: relative;
+}
+
+.list li a::after {
+    content: ''; 
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url("./images/Arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 14px;
+    vertical-align: middle;
+}
+
+.list:nth-child(-n + 2) {
+    border-right: 1px solid #E6E9EA;
+    margin-right: 69px;
+}
+
+#highlighted {
+    color: var(--primary-color);
+}
+
+#highlighted::after {
+    background-image: url("./images/Arrow-primary.svg");
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 91px 0 31px 0;
+}
+
+.social-media-circles {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+footer .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    width: 72px;
+    height: 72px;
+}
+
+.facebook {
+    margin: 0 20px;
+}
+
+footer hr {
+    position: static;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    padding-top: 31px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-content .logo {
+    justify-self: start;
+}
+
+.footer-content p, .footer-content a {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 22.4px;
+}
+
+.footer-content p {
+    justify-self: center;
+}
+
+.policy {
+    width: 287px;
+    display: flex;
+    justify-content: space-between;
+    justify-self: end;
 }
 
 
